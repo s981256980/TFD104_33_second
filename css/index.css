@@ -1,0 +1,242 @@
+@import "./common/header.css";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+@import "./common/footer.css";
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+
+
+div.bannerout{
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+
+
+/* =========================== banner ====================== */
+div.bannerout div.banner {
+  /* border: 1px solid green; */
+  background-image: url(../images/banner.jpg);
+  background-repeat: no-repeat;
+  /* min-width: 1200px; */
+  height: calc(100vh - 100px);
+  /* height:100px; */
+  background-size: cover;
+  background-position: center center;
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-size: 1rem;
+  /* object-fit: cover; */
+}
+
+@media all and (max-width: 576px) {
+  div.bannerout div.banner { 
+    /* border: 1px solid green; */
+    /* max-width: 100%; */
+    height: 1px;
+    /* font-size: 1rem; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 100%;
+    /* transform: translateX(-5%); */
+  }
+}
+
+
+/* =========================== brandtext ====================== */
+
+p.brand{
+  /* border: 1px solid green; */
+  width: 100%;
+  margin: 50px 0;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 50px auto;
+  color: #233F30;
+  /* padding: 0 auto; */
+  /* left: 50%;
+  position: absolute;
+  transform: translateX(-50%); */
+}
+@media all and (max-width: 576px){
+  p.brand{
+    padding: 10px;
+  }
+}
+
+
+
+/* =========================== 三大服務項目 ====================== */
+main.main{
+  border: 1px solid red;
+  width: 100%;
+}
+
+
+/* =========================== service1 ====================== */
+main.main div.service1{
+  /* border: 1px solid green; */
+  margin: 0 0 70px;
+}
+
+main.main div.service1 div.service1pic{
+  width: 100%;
+}
+
+main.main div.service1 div.service1pic > a{
+  display: inline-block;
+}
+
+main.main div.service1 div.service1text{
+  width: 100%;
+  /* border: 1px solid blue; */
+  text-align: center;
+}
+
+main.main div.service1 div.service1text p.service1head{
+  font-size: 2rem;
+  margin: 16px 0;
+}
+
+main.main div.service1 div.service1text div.button1{
+  /* border: 1px solid black; */
+  background-color: #233F30;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  width: 150px;
+  margin: 16px auto 0;
+  padding: 10px 0;
+}
+
+main.main div.service1 div.service1text div.button1 > a:visited{
+  color: black;
+  text-decoration: none;
+}
+
+main.main div.service1 div.service1text div.button1 > a:link{
+  color: black;
+  text-decoration: none;
+}
+
+main.main div.service1 div.service1text div.button1 span.button1{
+  color: white;
+  text-decoration: none;
+}
+
+
+/* =========================== service2 ====================== */
+
+main.main div.service2{
+  /* border: 1px solid green; */
+  margin: 0 0 70px;
+}
+
+main.main div.service2 div.service2pic{
+  width: 100%;
+}
+
+main.main div.service2 div.service2pic > a{
+  display: inline-block;
+}
+
+main.main div.service2 div.service2text{
+  width: 100%;
+  /* border: 1px solid blue; */
+  text-align: center;
+}
+
+main.main div.service2 div.service2text p.service2head{
+  font-size: 2rem;
+  margin: 16px 0;
+}
+
+main.main div.service2 div.service2text div.button2{
+  /* border: 1px solid black; */
+  background-color: #233F30;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  width: 150px;
+  margin: 16px auto 0;
+  padding: 10px 0;
+}
+
+main.main div.service2 div.service2text div.button2 > a:visited{
+  color: black;
+  text-decoration: none;
+}
+
+main.main div.service2 div.service2text div.button2 > a:link{
+  color: black;
+  text-decoration: none;
+}
+
+main.main div.service2 div.service2text div.button2 span.button2{
+  color: white;
+  text-decoration: none;
+}
+
+/* =========================== service3 ====================== */
+
+main.main div.service3{
+  /* border: 1px solid green; */
+  margin: 0 0 70px;
+}
+
+main.main div.service3 div.service3pic{
+  width: 100%;
+}
+
+main.main div.service3 div.service3pic > a{
+  display: inline-block;
+}
+
+main.main div.service3 div.service3text{
+  width: 100%;
+  /* border: 1px solid blue; */
+  text-align: center;
+}
+
+main.main div.service3 div.service3text p.service3head{
+  font-size: 2rem;
+  margin: 16px 0;
+}
+
+main.main div.service3 div.service3text div.button3{
+  /* border: 1px solid black; */
+  background-color: #233F30;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  width: 150px;
+  margin: 16px auto 0;
+  padding: 10px 0;
+}
+
+main.main div.service3 div.service3text div.button3 > a:visited{
+  color: black;
+  text-decoration: none;
+}
+
+main.main div.service3 div.service3text div.button3 > a:link{
+  color: black;
+  text-decoration: none;
+}
+
+main.main div.service3 div.service3text div.button3 span.button3{
+  color: white;
+  text-decoration: none;
+}
+

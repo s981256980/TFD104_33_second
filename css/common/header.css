@@ -1,0 +1,344 @@
+*{
+  box-sizing: border-box;
+}
+
+/* ===========================漢堡製作====================== */
+button.hamburger_icon{
+  border: 1px solid gray;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  background: none;
+  display: none;
+}
+@media all and (max-width: 576px){
+  button.hamburger_icon{
+    display: inline-block;
+    margin: 10px;
+    /* float: left; */
+  }
+}
+
+@media all and (max-width: 1200px){
+  header.header2 button.hamburger_icon{
+    display: inline-block;
+    margin: 10px;
+    /* float: left; */
+  }
+}
+
+button.hamburger_icon span.-hr{
+  height: 1px;
+  width: 80%;
+  background-color: gray;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button.hamburger_icon span.-hr.-top{
+  top: 25%;
+}
+
+button.hamburger_icon span.-hr.-bottom{
+  top: 75%;
+}
+
+/* -on 的狀態 */ /* 上方的線 */
+
+button.hamburger_icon.-on span.-hr.-top{
+  transform-origin: top left;
+  top: 5px;
+  left: 6px;
+  width: 102%;
+  transform: rotate(45deg);
+}
+/* 中間的線 */
+button.hamburger_icon.-on span.-hr.-middle{
+  opacity: 0;
+}
+/* 下方的線 */
+button.hamburger_icon.-on span.-hr.-bottom{
+  transform-origin: top left;
+  bottom: 5px;
+  left: 6px;
+  width: 102%;
+  transform: rotate(-45deg);
+  top: auto;
+}
+
+/* ===========================導覽列版本1====================== */
+
+header.header{
+  /* border: 1px solid red; */
+  /* text-align: center; */
+  margin: 0 auto;
+  transition: transform 1s;
+  width: 100%;
+}
+
+@media all and (max-width: 576px){
+  header.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+ 
+header.header a:link{
+  color: black;
+  text-decoration: none;
+}
+header.header a:visited{
+  color: black;
+  text-decoration: none;
+}
+
+header.header a.logo_img{
+  /* border: 1px solid black; */
+  display: inline-block;
+  width: 400px;
+  margin: 0 auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-45%);
+}
+
+@media all and (max-width: 576px){
+  header.header a.logo_img{
+    width: 45%;
+    margin: 0 auto;
+    left: 0;
+    transform: translateX(0);
+  }
+}
+
+header.header a.logo_img img{
+  max-width: 100%;
+  /* margin: 10 auto; */
+}
+
+header.header a i.fa-user-circle{
+  /* text-align: right; */
+  font-size: 2.5rem;
+  display: inline-block;
+  float: right;
+  padding: 50px;
+  /* text-align: right; */
+}
+@media all and (max-width: 576px){
+  header.header a i.fa-user-circle{
+    float: none;
+    padding: 10px;
+    font-size: 2rem;
+  }
+}
+
+header.header a.logo_img, a i.fa-user-circle{
+  vertical-align: middle;
+}
+
+
+header.header nav.nav{
+  display: flex; 
+  /* border: 1px solid green; */
+}
+
+@media all and (max-width: 576px){
+  header.header nav.nav{
+/*     display: block; */
+  display: block;
+  border: 1px solid black;
+  position: fixed;
+  top: 75px;
+  right: 0px;
+  background-color: #233F30;
+  width: 100%;
+  /* height: 100vh; */
+  transition: all 1s;
+  transform: translateX(100%);
+  }
+
+  header.header nav.nav.-on{
+    transform: translateX(0%);
+  }
+}
+
+header.header nav.nav ul{
+  list-style: none;
+  margin: 0 auto;
+}
+@media all and (max-width: 576px){
+  header.header nav.nav ul{
+    display: block;
+    /* border: 1px solid blue; */
+    list-style: none;
+    padding: 0;
+  }
+}
+
+header.header nav.nav ul.nav_list > li{
+  display: inline-flex;
+  padding: 0 3px;
+  font-size: 1.5rem;
+}
+
+@media all and (max-width: 576px){
+  header.header nav.nav ul.nav_list li.open{
+    display: block;
+    /* border: 1px solid red; */
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    
+  }
+
+  header.header nav.nav ul.nav_list li.open > a{
+    color: white;
+    font-size: 1.5rem;
+    position: relative;
+    padding: 5px;
+  }
+
+  header.header nav.nav ul.nav_list li.open > a::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100%;
+    /* border: 1px solid red;  */
+    height: 1px; 
+    background-color: white;
+  }
+
+  header.header nav.nav ul.nav_list li.close{
+    display: none; 
+    border: 1px solid green;
+  }
+
+
+}
+
+
+header.header nav.nav ul.nav_list > li:hover{
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+
+
+/* =========================== 導覽列版本2 ====================== */
+
+header.header2{
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 65px;
+  /* left: 50%;
+  transform: translateX(-50%); */
+  /* position: relative; */
+  margin: 0 auto;
+  font-size: 0;
+  padding: 0 10px;
+  display: none;
+}
+
+header.header2.-on{
+  display: block;
+  position: sticky;
+  top: 0;
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 65px;
+  /* left: 50%;
+  transform: translateX(-50%); */
+  /* position: relative; */
+  margin: 0 auto;
+  font-size: 0;
+  padding: 0 10px;
+  background-color: rgb(255, 255, 255, 0.5);
+  z-index: 99;
+}
+
+@media all and (max-width: 1200px){
+  header.header2.-on{
+    display: none;
+  }
+}
+
+header.header2.-on a i.fa-user-circle{
+  font-size: 2rem;
+  display: inline-block;
+  text-align: right;
+  padding: 15px 25px;
+  float: right;
+}
+
+header.header2.-on a:link{
+  color: black;
+  text-decoration: none;
+}
+
+header.header2.-on a:visited{
+  color: black;
+  text-decoration: none;
+}
+
+
+header.header2.-on a.logo_img{
+  /* border: 1px solid green; */
+  display: inline-block;
+  margin: 0 90px 0 0;
+}
+
+header.header2.-on a.logo_img img{
+  height: 65px;
+  width: 175px;
+  border-radius: 10px;
+}
+
+header.header2.-on a.logo_img, nav.nav, a i.fa-user-circle{
+  vertical-align: middle;
+}
+
+header.header2.-on nav.nav{
+  /* border: 1px solid green; */
+  width: 800px;
+  display: inline-block;
+}
+
+header.header2.-on nav.nav ul.nav_list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  /* height: 200px; */
+}
+
+header.header2.-on nav.nav ul.nav_list > li{
+  display: inline-block;
+  font-size: 1.25rem;
+  padding: 0 10px;
+}
+
+header.header2.-on nav.nav ul.nav_list > li > a:hover{
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  /* border: 1px solid red; */
+}
+
+
+
+
+
+
+
+
+
+
+
