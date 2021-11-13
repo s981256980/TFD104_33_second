@@ -106,14 +106,15 @@
 
     <!-- 三大服務 -->
     <main class="main">
-      <!-- <span class="left">
-        <i class="fas fa-chevron-left"></i>
-      </span> -->
-      <!-- <span class="right">
-        <i class="fas fa-chevron-right"></i>
-      </span> -->
 
-      <div class="service1">
+      <button type="button" class="btn1">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button type="button" class="btn2">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <div class="service1 -on">
         <div class="service1pic">
           <a href="./course.html">
             <img src="./images/course.jpg" alt="療癒手作課程" />
@@ -129,7 +130,7 @@
           </p>
 
           <div class="button1">
-            <a href="./course.html" >
+            <a href="./course.html">
               <span class="button1">了解課程</span>
             </a>
           </div>
@@ -147,13 +148,12 @@
           <p class="service2head">苔球植栽</p>
           <p>
             想用植物裝飾室內空間，根本不用花大錢，以<br />
-            現有空間為主體，就可以製作大大小小，不同<br />
-            尺寸的苔球，即使空間狹小，也能找到自己喜<br>
-            歡的植物，打造綠色紓壓角落！
+            現有空間為主體，就可以製作大小不同尺寸的<br />
+            苔球，打造綠色紓壓角落！<br />
           </p>
 
           <div class="button2">
-            <a href="./product.html" >
+            <a href="./product.html">
               <span class="button2">立即選購</span>
             </a>
           </div>
@@ -173,18 +173,32 @@
             照顧植物時，可能會擔心植物枯黃或掉葉，或<br />
             不知道正確的照顧方法，這時候就很希望可以<br />
             學習到照顧的方法或者和植物愛好者交流！
-            
           </p>
 
           <div class="button3">
-            <a href="./product.html" >
+            <a href="./product.html">
               <span class="button3">瞭解更多</span>
             </a>
           </div>
         </div>
       </div>
-
     </main>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
@@ -222,6 +236,47 @@
           $("nav.nav").toggleClass("-on");
         });
       });
+
+      // 三大服務區塊按鈕
+      $(function () {
+        $("button.btn1").on("click", function () {
+          $("div.service1, div.service2, div.service3").removeClass("-on");
+          $("div.service2").addClass("-on");
+        });
+
+        $("button.btn2").on("click", function () {
+          $("div.service1, div.service2, div.service3").removeClass("-on");
+          $("div.service3").addClass("-on");
+        });
+      });
+      // let current = 0;
+      // const items = document.querySelectorAll(".--item");
+      // const handleRight = () => {
+      //   items[current].style.animation = "hideRight 1.5s forwards";
+      //   items[current >= items.length - 1 ? 0 : current + 1].style.animation =
+      //     "showRight 1.5s forwards";
+      //   if (current < items.length - 1) {
+      //     current++;
+      //   } else {
+      //     current = 0;
+      //   }
+      // };
+      // const handleLeft = () => {
+      //   items[current].style.animation = "hideLeft 1.5s forwards";
+      //   items[current > 0 ? current - 1 : 2].style.animation =
+      //     "showLeft 1.5s forwards";
+      //   if (current > 0) {
+      //     current--;
+      //   } else {
+      //     current = 2;
+      //   }
+      // };
+      // const getSliderHeight = () => {
+      //   document.querySelector(".slider").style.height =
+      //     document.querySelector(".slider--item").clientHeight + "px";
+      // };
+      // window.onresize = getSliderHeight;
+      // getSliderHeight();
     </script>
   </body>
 </html>
