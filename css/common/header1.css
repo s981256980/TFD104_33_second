@@ -1,84 +1,241 @@
-*{
+* {
   box-sizing: border-box;
 }
 
-header.header{
+/* ===========================漢堡製作====================== */
+button.hamburger_icon {
+  border: 1px solid gray;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  background: none;
+  display: none;
+}
+@media all and (max-width: 1050px) {
+  button.hamburger_icon {
+    /* border: 1px solid green; */
+    display: inline-block;
+    margin: 10px;
+    /* float: left; */
+  }
+}
+
+button.hamburger_icon span.-hr {
+  height: 1px;
+  width: 80%;
+  background-color: gray;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button.hamburger_icon span.-hr.-top {
+  top: 25%;
+}
+
+button.hamburger_icon span.-hr.-bottom {
+  top: 75%;
+}
+
+/* -on 的狀態 */ /* 上方的線 */
+
+button.hamburger_icon.-on span.-hr.-top {
+  transform-origin: top left;
+  top: 4px;
+  left: 6px;
+  width: 102%;
+  transform: rotate(45deg);
+}
+/* 中間的線 */
+button.hamburger_icon.-on span.-hr.-middle {
+  opacity: 0;
+}
+/* 下方的線 */
+button.hamburger_icon.-on span.-hr.-bottom {
+  transform-origin: top left;
+  bottom: 4px;
+  left: 4px;
+  width: 102%;
+  transform: rotate(-45deg);
+  top: auto;
+}
+
+/* =======================================導覽列=================================*/
+
+header.header {
   /* border: 1px solid red; */
-  width: 1200px;
-  height: 75px;
+  width: 100%;
+  /* height: 75px; */
   /* left: 50%;
   transform: translateX(-50%); */
   /* position: relative; */
-  margin: 0 auto;
+  /* margin: 0 auto; */
   font-size: 0;
   padding: 0 10px;
-
+  transition: transform 1s;
 }
 
-a i.fa-user-circle{
-  font-size: 2.5rem;
+@media all and (max-width: 1050px) {
+  header.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+}
+
+header.header a i.fa-user-circle {
+  /* text-align: right; */
+  font-size: 2rem;
   display: inline-block;
-  text-align: right;
-  padding: 0 25px
+  /* text-align: right; */
+  padding: 25px 25px;
+  float: right;
+}
+@media all and (max-width: 1050px) {
+  header.header a i.fa-user-circle {
+    float: none;
+    padding: 10px;
+    font-size: 2rem;
+  }
 }
 
-a:link{
+a:link {
   color: black;
   text-decoration: none;
 }
 
-a:visited{
+a:visited {
   color: black;
   text-decoration: none;
   /* text-underline-offset: 1px; */
 }
 
-
-header.header a.logo_img{
+header.header a.logo_img {
   /* border: 1px solid green; */
   display: inline-block;
-  margin: 0 90px 0 0;
+  margin: 0;
+}
+@media all and (min-width: 576px) and (max-width: 1050px) {
+  header.header a.logo_img {
+    width: 200px;
+    margin: 0 auto;
+    left: 0;
+    transform: translateX(0);
+  }
 }
 
-header.header a.logo_img img{
+@media all and (max-width: 575px) {
+  header.header a.logo_img {
+    margin: 0 auto;
+    width: 200px;
+    left: 0;
+    transform: translateX(0);
+  }
+}
+
+header.header a.logo_img img {
   height: 75px;
   width: 200px;
   border-radius: 10px;
 }
-
-header.header a.logo_img, nav.nav, a i.fa-user-circle{
-  vertical-align: middle;
+@media all and (max-width: 1050px) {
+  header.header a.logo_img img {
+    max-width: 100%;
+    /* border-radius: 10px; */
+  }
 }
 
-header.header nav.nav{
+
+
+header.header nav.nav {
   /* border: 1px solid green; */
-  width: 800px;
-  display: inline-block;
+  max-width: 100%;
+  display: flex;
+  float: right;
+  padding: 20px 25px 0 0;
+  /* padding-left: 20%; */
+  /* transform: translateX(15%); */
 }
 
-header.header nav.nav ul.nav_list{
+@media all and (max-width: 1050px) {
+  header.header nav.nav {
+    /*     display: block; */
+    display: block;
+    border: 1px solid black;
+    position: fixed;
+    top: 75px;
+    right: 0px;
+    background-color: #233f30;
+    width: 100%;
+    height: 100vh;
+    transition: all 1s;
+    transform: translateX(100%);
+    z-index: 5;
+  }
+
+  header.header nav.nav.-on {
+    transform: translateX(0%);
+  }
+}
+
+header.header nav.nav ul.nav_list {
   list-style: none;
   margin: 0;
   padding: 0;
   text-align: right;
-
+  /* border: 1px solid red; */
   /* height: 200px; */
 }
 
-header.header nav.nav ul.nav_list > li{
-  display: inline-block;
-  font-size: 24px;
-  padding: 0 10px;
+header.header nav.nav ul.nav_list > li {
+  display: inline-flex;
+  padding: 0 3px;
+  font-size: 1.5rem;
 }
 
-header.header nav.nav ul.nav_list > li{
-  display: inline-block;
-  font-size: 24px;
-  padding: 0 10px;
+@media all and (max-width: 1050px) {
+  header.header nav.nav ul.nav_list li.open {
+    display: block;
+    /* border: 1px solid red; */
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+  }
+
+  header.header nav.nav ul.nav_list li.open > a {
+    color: white;
+    font-size: 1.5rem;
+    position: relative;
+    padding: 5px;
+  }
+
+  header.header nav.nav ul.nav_list li.open > a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 100%;
+    /* border: 1px solid red;  */
+    height: 1px;
+    background-color: white;
+  }
+
+  
+
+  header.header nav.nav ul.nav_list li.close {
+    display: none;
+    border: 1px solid green;
+  }
 }
 
-header.header nav.nav ul.nav_list > li > a:hover{
-  text-decoration: underline;
-  text-underline-offset: 10px;
-  /* border: 1px solid red; */
+header.header nav.nav ul.nav_list > li > a:hover {
+  /* text-decoration: underline;
+  text-underline-offset: 10px; */
+  border: 1px solid white;
 }

@@ -93,10 +93,30 @@ main.main{
   /* border: 1px solid red; */
   width: 100%;
   position: relative;
+  background-image: url(../images/service.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: block;
+  flex-direction: column;
+}
+
+@media all and (max-width: 575.98px){
+  main.main {
+    /* border: 1px solid blue; */
+    /* position: static; */
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: block;
+    flex-direction: column;
+    
+  }
 }
 
 main.main button.btn1, button.btn2{
   /* border: 1px solid green; */
+  cursor: pointer;
 }
 
 @media all and (max-width: 575.98px){
@@ -309,7 +329,6 @@ main.main div.service3 div.service3text div.button3 span.button3{
     text-align: center;
     /* height: 100vh; */
   }
-
  
   main.main div.service1.-on, div.service2.-on, div.service3.-on{
     position: absolute;
@@ -319,10 +338,577 @@ main.main div.service3 div.service3text div.button3 span.button3{
     opacity: 1;
     z-index: 1;
   }
-
-
-
-
 }
 
 
+
+
+/* =========================== 客製化服務區 ====================== */
+section.customize{
+  /* border: 1px solid green; */
+  /* position: relative; */
+  /* height: 1600px; */
+  width: 100%;
+  margin: 100px 0 100px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+@media all and (max-width: 576px){
+  section.customize{
+    margin: 180px 0 0 0;
+  }
+}
+
+section.customize p.customizehead{
+  /* border: 1px solid black; */
+  font-size: 2rem;
+  color: #233F30;
+  margin-left: 10%;
+  align-self: flex-start;
+  /* left: 25%; */
+  /* position: absolute; */
+  /* transform: translateX(-50%); */
+}
+@media all and (max-width: 576px){
+  section.customize p.customizehead{
+    margin: 10px 10px;
+  }
+}
+
+section.customize p.customizehead::before{
+  content: "";
+  border: 0.65rem solid #233F30;
+  margin: 0 5px;
+}
+
+/* =========================== 客製化服務區-livingroom====================== */
+
+section.customize div.livingroom{
+  /* border: 1px solid red; */
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  margin: 50px 0 50px;
+  /* width: 800px; */
+  /* height: 400px; */
+  /* position: absolute; */
+}
+@media all and (max-width: 575.98px){
+  section.customize div.livingroom{
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+section.customize div.livingroom div.livingroompic{
+  border-radius: 60px 0 0 60px;
+  /* border: 1px solid blue; */
+  overflow: hidden;
+  width: 60%;
+  /* height: 400px; */
+  flex-shrink: 0;
+  font-size: 0;
+}
+
+section.customize div.livingroom div.livingroompic img{
+  max-width: 100%;
+  
+}
+
+@media all and (max-width: 575.98px){
+  section.customize div.livingroom div.livingroompic{
+    width: 100%;
+    border-radius: 30px;
+  }
+}
+
+
+section.customize div.livingroom div.livingroom1{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+section.customize div.livingroom span.livingroomhead{
+  font-size: 2rem;
+  /* border: 1px solid black; */
+  display: block;
+  /* position: absolute; */
+  /* left: 55%; */
+  /* bottom: 150px; */
+  padding: 10px;
+  transform: translateY(-50%);
+}
+
+section.customize div.livingroom span.livingroomtext{
+  /* width: 300px; */
+  /* border: 1px solid black; */
+  display: block;
+  /* position: absolute; */
+  padding: 10px;
+  transform: translateY(-50%);
+  flex-shrink: 0;
+}
+@media all and (max-width: 575.98px){
+  section.customize div.livingroom span.livingroomhead{
+    transform: translateY(0);
+    
+  }
+
+  section.customize div.livingroom span.livingroomtext{
+    transform: translateY(0);
+  }
+}
+
+section.customize div.livingroom div.livingroom1 a:link{
+  color: black;
+  text-decoration: none;
+}
+
+
+section.customize div.livingroom span.livingroom1{
+  /* border: 1px solid black; */
+  right: 9%;
+  align-self: flex-end;
+  text-decoration: none;
+  
+  /* position: absolute; */
+  /* bottom: 5px; */
+}
+
+
+
+
+
+/* =========================== 客製化服務區-kitchen====================== */
+section.customize div.kitchen{
+  /* border: 1px solid red; */
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  margin: 50px 0 50px;
+  padding: 0;
+  /* justify-content: flex-end; */
+  /* position: absolute; */
+  /* left: 50%;
+  transform: translateX(-50%);
+  top: 650px; */
+
+}
+
+@media all and (max-width: 575.98px){
+  section.customize div.kitchen{
+    flex-direction: column-reverse;
+    width: 100%;
+    margin: 30px 0 50px;
+  }
+}
+
+
+section.customize div.kitchen div.kitchenpic{
+  border-radius: 0 60px 60px 0;
+  /* overflow: hidden;
+  float: right; */
+  /* border: 1px solid blue; */
+  overflow: hidden;
+  width: 60%;
+  /* height: 400px; */
+  flex-shrink: 0;
+  font-size: 0;
+
+}
+
+section.customize div.kitchen div.kitchenpic img{
+  max-height: 100%;
+}
+
+@media all and (max-width: 575.98px){
+  section.customize div.kitchen div.kitchenpic{
+    width: 100%;
+    border-radius: 30px;
+  }
+}
+
+section.customize div.kitchen div.kitchen1{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+section.customize div.kitchen span.kitchenhead{
+  font-size: 2rem;
+  /* border: 1px solid black; */
+  display: block;
+  /* position: absolute; */
+  transform: translateY(-100%);
+}
+
+section.customize div.kitchen span.kitchentext{
+  display: block;
+  /* position: absolute; */
+  /* padding: 10px; */
+  transform: translateY(-50%);
+  padding-right: 10px;
+}
+
+@media all and (max-width: 575.98px){
+  section.customize div.kitchen span.kitchenhead{
+    transform: translateY(0);
+    padding: 10px;
+    
+  }
+  section.customize div.kitchen span.kitchentext{
+    transform: translateY(0);
+    padding: 10px;
+  }
+
+}
+
+section.customize div.kitchen div.kitchen1 a:link{
+  color: black;
+  text-decoration: none;
+}
+
+section.customize div.kitchen span.kitchen1{
+  /* border: 1px solid black; */
+  padding-right: 10px;
+  align-self: flex-end;
+  text-decoration: none;
+  /* position: absolute; */
+  
+}
+
+
+/* =========================== 客製化服務區-bedroom====================== */
+
+section.customize div.bedroom{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  margin: 50px 0 50px;;
+  /* position: absolute; */
+  /* left: 50%;
+  transform: translateX(-50%);
+  top: 1140px; */
+}
+
+@media all and (max-width: 575.98px){
+  section.customize div.bedroom{
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+section.customize div.bedroom div.bedroompic{
+  border-radius: 60px 0 0 60px;
+  /* border: 1px solid blue; */
+  overflow: hidden;
+  width: 60%;
+  /* height: 400px; */
+  flex-shrink: 0;
+  font-size: 0;
+}
+
+
+section.customize div.bedroom div.bedroompic img{
+  max-width: 100%;
+}
+
+@media all and (max-width: 575.98px){
+  section.customize div.bedroom div.bedroompic{
+    width: 100%;
+    border-radius: 30px;
+  }
+}
+
+section.customize div.bedroom div.bedroom1{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+section.customize div.bedroom span.bedroomhead{
+  font-size: 2rem;
+  /* border: 1px solid black; */
+  display: block;
+  /* position: absolute; */
+  padding: 10px;
+  transform: translateY(-50%);
+}
+
+section.customize div.bedroom span.bedroomtext{
+ 
+  /* border: 1px solid black; */
+  display: block;
+  /* position: absolute; */
+  padding: 10px;
+  transform: translateY(-50%);
+}
+
+@media all and (max-width: 575.98px){
+  section.customize div.bedroom span.bedroomhead{
+    transform: translateY(0);
+    
+  }
+
+  section.customize div.bedroom span.bedroomtext{
+    transform: translateY(0);
+  }
+}
+
+section.customize div.bedroom span.bedroom1 a:link{
+  color: black;
+  text-decoration: none;
+}
+
+section.customize div.bedroom span.bedroom1{
+  /* border: 1px solid black; */
+  right: 9%;
+  align-self: flex-end;
+  text-decoration: none;
+}
+
+
+/* =========================== 最新商品 ====================== */
+/* 最新商品 */
+section.product{
+  /* border: 1px solid green; */
+  /* position: relative; */
+  width: 100%;
+  /* height: 1000px; */
+  margin: 100px 0;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+section.product p.producthead{
+  font-size: 2rem;
+  color: #233F30;
+  padding: 0 0 0 50px;
+}
+
+@media all and (max-width: 576px){
+  section.product p.producthead{
+    margin: 10px 10px;
+    padding: 0;
+  }
+}
+
+section.product p.producthead::before{
+  content: "";
+  border: 8px solid #233F30;
+  margin: 0 5px;
+}
+
+section.product div.productflex{
+  display: flex;
+  width: 100%;
+  /* border: 1px solid black; */
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media all and (max-width: 575.98px){
+  section.product div.productflex{
+    flex-direction: column;
+  }
+}
+
+
+/* ================================最新商品兔腳蕨========================== */
+section.product div.productflex div.product1{
+  /* border: 1px solid purple; */
+  width: 30%;
+  margin: 50px 0 0 0;
+  border-radius: 30px 30px 0 0;
+  overflow: hidden;
+  flex-shrink: 0;
+  /* display: inline-block; */
+}
+
+@media all and (max-width: 575.98px){
+  section.product div.productflex div.product1{
+    width: 100%;
+  }
+}
+
+section.product div.productflex div.product1 img{
+    max-width: 100%;
+    /* border: 1px solid black; */
+
+}
+
+section.product div.productflex div.product1 a{
+  display: inline-block;
+  /* text-decoration: none; */
+}
+
+section.product div.productflex div.product1 a:link{
+  color: black;
+  text-decoration: none;
+}
+
+section.product div.productflex div.product1 a:visited{
+  color: black;
+  text-decoration: none;
+}
+
+section.product div.productflex div.product1 div.product1price i.fa-heart{
+  float: right;
+  margin: 0 10px 0 0;
+}
+
+@media all and (max-width: 575.98px){
+  section.product div.productflex div.product1 div.product1hov{
+    padding-left: 10px;
+  }
+}
+
+section.product div.productflex div.product1 div.product1hov:hover{
+  display: block;
+  background-color: #F0F0F0;
+  color: black;
+  position: relative;
+  bottom: 20px;
+}
+
+section.product div.productflex div.product1 div.product1hov:hover div.product1price{
+  display: block;
+  background-color: #F0F0F0;
+  color: black;
+} 
+
+/* ==========================最新商品龜背芋=================================== */
+section.product div.productflex div.product2{
+  /* border: 1px solid purple; */
+  /* border: 1px solid purple; */
+  width: 30%;
+  margin: 100px 0 0 0;
+  border-radius: 30px 30px 0 0;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+@media all and (max-width: 575.98px){
+  section.product div.productflex div.product2{
+    width: 100%;
+    margin: 50px 0 0 0;
+  }
+}
+
+section.product div.productflex div.product2 img{
+  /* position: relative; */
+  /* transform: translateX(-25%); */
+  max-width: 100%;
+}
+
+section.product div.productflex div.product2 a{
+  display: inline-block;
+  /* text-decoration: none; */
+}
+
+section.product div.productflex div.product2 a:link{
+  color: black;
+  text-decoration: none;
+}
+
+section.product div.productflex div.product2 a:visited{
+  color: black;
+  text-decoration: none;
+}
+
+section.product div.productflex div.product2 p.product2{
+  color: black;
+}
+
+section.product div.productflex div.product2 div.product2price i.fa-heart{
+  float: right;
+  margin: 0 10px 0 0;
+}
+
+@media all and (max-width: 575.98px){
+  section.product div.productflex div.product2 div.product2hov{
+    padding-left: 10px;
+  }
+}
+
+
+section.product div.productflex div.product2 div.product2hov:hover{
+  display: block;
+  background-color: #F0F0F0;
+  color: black;
+  position: relative;
+  bottom: 20px;
+}
+
+section.product div.productflex div.product2 div.product2hov:hover div.product2price{
+  display: block;
+  background-color: #F0F0F0;
+  color: black;
+} 
+
+/* ================================最新商品極光粗肋草+霓虹草========================== */
+section.product div.product3{
+  /* border: 1px solid purple; */
+  width: 30%;
+  margin: 150px 0 0 0;
+  border-radius: 30px 30px 0 0;
+  overflow: hidden;
+  flex-shrink: 0;
+  /* display: inline-block; */
+}
+
+@media all and (max-width: 575.98px){
+  section.product div.productflex div.product3{
+    width: 100%;
+    margin: 50px 0 0 0;
+  }
+}
+
+section.product div.productflex div.product3 img{
+  max-width: 100%;
+}
+
+section.product div.productflex div.product3 a{
+  display: inline-block;
+  /* text-decoration: none; */
+}
+
+section.product div.productflex div.product3 a:link{
+  color: black;
+  text-decoration: none;
+}
+
+section.product div.productflex div.product3 a:visited{
+  color: black;
+  text-decoration: none;
+}
+
+section.product div.product3 div.product3price i.fa-heart{
+  float: right;
+  margin: 0 10px 0 0;
+}
+
+section.product div.product3 div.product3hov:hover{
+  display: block;
+  background-color: #F0F0F0;
+  color: black;
+  position: relative;
+  bottom: 20px;
+}
+
+@media all and (max-width: 575.98px){
+  section.product div.productflex div.product3 div.product3hov{
+    padding-left: 10px;
+  }
+}
+
+section.product div.product3 div.product3hov:hover div.product3price{
+  display: block;
+  background-color: #F0F0F0;
+  color: black;
+} 

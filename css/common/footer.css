@@ -3,45 +3,62 @@
 }
 
 footer.footer{
-  border: 1px solid black;
+  /* border: 1px solid black; */
   /* width: 1200px; */
-  height: 400px;
-  margin: 0 auto;
+  /* height: 400px; */
+  /* margin: 0 auto; */
   background-color: #233F30;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: baseline;
-  flex-wrap: wrap;
+  /* display: flex; */
+  /* justify-content: space-evenly; */
+  /* align-items: baseline; */
+  /* flex-wrap: wrap; */
 }
 
 footer.footer div.information{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: baseline;  
-  border: 1px solid red;
+  /* border: 1px solid red; */
   /* width: 1200px; */
   margin: 45px 0;
   flex-wrap: wrap;
 }
 
+@media all and (max-width: 575.98px){
+  footer.footer div.information{
+    flex-direction: column;
+  }
+  
+}
+
 footer.footer div.information > div{
   padding: 45px 0 0 0;
   color: white;
-  width: 33%;
+  width: 30%;
+  /* border: 1px solid red; */
+  text-align: center;
+}
+
+@media all and (max-width: 575.98px){
+  footer.footer div.information > div{
+    /* flex-direction: column; */
+    width: 100%;
+  }
+  
 }
 
 footer.footer p.notice{
   /* display: inline-block; */
   margin: 50px;
   color: white;
+  /* border: 1px solid blue; */
+  /* width: 100%; */
 }
 
 footer.footer p.notice a.tibame:link{
   color: white;
-
 }
 
 footer.footer p.notice a.tibame:visited{
   color: white;
-
 }

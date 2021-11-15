@@ -8,53 +8,122 @@
 body{
   margin: 0;
 }
+img{
+  max-width: 100%;
+}
+
+header.header nav.nav ul.nav_list li.open a.about {
+  /* content: ""; */
+  border: 1px solid white;
+  /* color: red; */
+  /* font-size: 64px; */
+}
 
 header.header nav.nav ul.nav_list li.aboutli{
-  text-decoration: underline;
-  text-underline-offset: 10px;
+  /* text-decoration: underline; */
+  /* text-underline-offset: 10px; */
   /* border: 1px solid red; */
   pointer-events: none;
 }
 
+div.bannerout{
+  /* border: 1px solid red; */
+  margin: 0;
+  height: auto;
+  padding: 0;
+  font-size: 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* height: auto; */
+
+}
 
 div.banner{
   /* border: 1px solid green; */
   background-image: url(../images/whitelogo.jpg);
-  background-repeat: no-repeat;
-  max-width: 1200px;
-  height: 600px;
   background-size: cover;
   background-position: center center;
-  margin: 0 auto 150px;
+  background-repeat: no-repeat;
+  /* height: auto; */
+  margin: 0;
+  padding-top: 30%;
+  font-size: 1rem;
   position: relative;
+  /* min-width: 1200px; */
+  
+  /* height:100px; */
+ 
 }
 
+@media all and (max-width: 575.98px) {
+  div.bannerout{
+    padding-top: 100%;
+    height: auto;
+    /* border: 1px solid red; */
+  }
+  div.bannerout div.banner { 
+    /* border: 1px solid green; */
+    /* max-width: 100%; */
+    background-image: url(../images/greenlogo.jpg);
+    height: 1px;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    /* left: 50% */
+    /* font-size: 1rem; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    /* padding-top: 100%; */
+    /* transform: translateX(-5%); */
+  }
+}
+
+
 div.banner i.fa-angles-down{
-  position: absolute;
+  /* position: absolute;
   left: 50%;
   bottom: 0;
-  font-size: 3rem;
+  font-size: 3rem; */
 }
 
 main.main{
   /* border: 1px solid red; */
-  width: 1200px;
-  margin: 0 auto 150px; 
+  width: 100%;
+  margin: 50px 0 100px; 
   position: relative;
+}
+@media all and (max-width: 575.98px){
+  main.main{
+    padding: 0 0 0 0;
+    margin: 0 0;
+    
+  }
 }
 
 main.main div.brand{
-  /* border: 1px solid green; */
+  border: 1px solid green;
   padding: 10px 50px;
-  width: 1100px;
+  width: 90%;
   margin: 0 auto;
   background-color: rgba(196, 196, 196, 0.3);
 }
+@media all and (max-width: 575.98px){
+  main.main div.brand{
+    padding: 10px 0 0 0;
+    margin: 0;
+    width: 100%;
+  }
+}
 
 main.main div.brand p.brandhead{
-  font-size: 32px;
+  font-size: 2rem;
+  /* border: 1px solid black; */
   color: #233F30
 }
+
 
 main.main div.brand p.brandhead::before{
   content: "";
@@ -75,35 +144,102 @@ main.main div.aboutuspic{
   right: 0;
   transform: translateY(10%);
 }
+@media all and (max-width: 1100px){
+  main.main div.aboutuspic{
+    display: none;
+  }
+}
 
 main.main div.aboutuspic img{
   width: 550px;
   height: 350px;
 }
 
+
+
+
+
+/* =======================地圖區 ======================*/
 section.map{
-  /* border: 1px solid green; */
-  width: 1200px;
+  border: 1px solid green;
+  width: 100%;
   margin: 0 auto 100px;
   position: relative;
+  padding-left: 50px;
+  display: flex;
+  align-items: center;
+}
+
+@media all and (max-width: 992px){
+  section.map{
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+    margin: 0;
+  }
+}
+
+@media all and (min-width: 576px) and (max-width: 992px){
+  section.map{
+    margin: 0 0 100px;
+
+  }
+}
+
+section.map div.googlemap{
+  width: 70%;
+  overflow: hidden;
+  /* border: 1px solid black; */
+}
+
+@media all and (max-width: 992px){
+  section.map div.googlemap{
+    width: 100%;
+    font-size: 0;
+  }
 }
 
 section.map div.infor{
-  /* border: 1px solid red; */
-  position: absolute;
-  background-color: rgba(196, 196, 196, 0.3);
-  right: 0px;
-  top: 50%;
-  transform: translateY(-50%);
+  /* border: 1px solid blue; */
+  /* position: absolute; */
+  background-color: rgb(219, 217, 217);
+  /* right: 0px; */
+  /* top: 50%; */
+  transform: translateX(-10%);
   width: 400px;
   height: 400px;
   padding: 30px;
+}
 
+@media all and (min-width: 576px) and (max-width: 992px){
+  section.map div.infor{
+    width: 90%;
+    transform: translateX(0);
+    /* padding: 0; */
+    /* text-align: center; */
+    /* align-self: center; */
+
+  }
+}
+
+@media all and (max-width: 576px){
+  section.map div.infor{
+
+    width: 100%;
+    transform: translateX(0);
+  }
 }
 
 section.map div.infor p.storehead{
-  font-size: 32px;
+  font-size: 2rem;
   color: #233F30;
   background-color: white;
   width: 180px;
+  text-align: center;
+  border-radius: 10px;
+}
+@media all and (max-width: 576px){
+  footer.footer div.information{
+    margin: 0px;
+  }
 }

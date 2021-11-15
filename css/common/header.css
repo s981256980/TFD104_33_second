@@ -52,7 +52,7 @@ button.hamburger_icon span.-hr.-bottom{
 
 button.hamburger_icon.-on span.-hr.-top{
   transform-origin: top left;
-  top: 5px;
+  top: 4px;
   left: 6px;
   width: 102%;
   transform: rotate(45deg);
@@ -64,8 +64,8 @@ button.hamburger_icon.-on span.-hr.-middle{
 /* 下方的線 */
 button.hamburger_icon.-on span.-hr.-bottom{
   transform-origin: top left;
-  bottom: 5px;
-  left: 6px;
+  bottom: 4px;
+  left: 4px;
   width: 102%;
   transform: rotate(-45deg);
   top: auto;
@@ -110,7 +110,7 @@ header.header a.logo_img{
 
 @media all and (max-width: 576px){
   header.header a.logo_img{
-    width: 45%;
+    width: 200px;
     margin: 0 auto;
     left: 0;
     transform: translateX(0);
@@ -154,7 +154,7 @@ header.header nav.nav{
   display: block;
   border: 1px solid black;
   position: fixed;
-  top: 65px;
+  top: 75px;
   right: 0px;
   background-color: #233F30;
   width: 100%;

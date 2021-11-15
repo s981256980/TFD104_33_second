@@ -2,10 +2,16 @@
 <html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
-    <title>山木森植栽</title>
+    <title>關於山木森植栽</title>
     <link rel="stylesheet" href="./css/about.css" />
-    <script src="https://kit.fontawesome.com/3088e0a9fd.js" crossorigin="anonymous"></script>
-    
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <script
+      src="https://kit.fontawesome.com/3088e0a9fd.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header class="header">
@@ -13,38 +19,45 @@
         <img src="./images/logo.png" alt="這是logo" />
       </a>
 
-      <nav class="nav">
-        <ul class="nav_list">
-          <li>
-            <a href="product.html">植栽</a>
-          </li>
-          <li>|</li>
-          <li>
-            <a href="course.html">手作課程</a>
-          </li>
-          <li>|</li>
-          <li>
-            <a href="blog.html">植療室</a>
-          </li>
-          <li>|</li>
-          <li>
-            <a href="customize.html">客製化植栽</a>
-          </li>
-          <li>|</li>
-          <li class="aboutli">
-            <a href="about.html">關於山木森 </a>
-          </li>
-        </ul>
-      </nav>
-
       <a href="#">
         <i class="fas fa-user-circle"></i>
       </a>
+
+      <button type="button" class="hamburger_icon">
+        <span class="-hr -top"></span>
+        <span class="-hr -middle"></span>
+        <span class="-hr -bottom"></span>
+      </button>
+
+      <nav class="nav">
+        <ul class="nav_list">
+          <li class="open">
+            <a href="product.html">植栽</a>
+          </li>
+          <li class="close">|</li>
+          <li class="open">
+            <a href="course.html">手作課程</a>
+          </li>
+          <li class="close">|</li>
+          <li class="open">
+            <a href="blog.html">植療室</a>
+          </li>
+          <li class="close">|</li>
+          <li class="open">
+            <a href="customize.html">客製化植栽</a>
+          </li>
+          <li class="close">|</li>
+          <li class="aboutli open">
+            <a class="about" href="about.html">關於山木森 </a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <div class="banner">
-			<i class="fa-solid fa-angles-down"></i>
-		</div>
+    <div class="bannerout">
+      <div class="banner"></div>
+    </div>
+    <!-- <i class="fa-solid fa-angles-down"></i> -->
 
     <main class="main">
       <div class="brand">
@@ -72,29 +85,31 @@
     </main>
 
     <section class="map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2936.378023169608!2d121.57715351891491!3d25.049181230756275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf7874fc05cd0f187!2zVFNVVEFZQSBCT09LU1RPUkUg6JSm5bGL5pu45bqXIOadvuWxseW6lw!5e0!3m2!1szh-TW!2stw!4v1635002489547!5m2!1szh-TW!2stw"
-        width="800"
-        height="500"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-      >
-      </iframe>
+      <div class="googlemap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2936.378023169608!2d121.57715351891491!3d25.049181230756275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf7874fc05cd0f187!2zVFNVVEFZQSBCT09LU1RPUkUg6JSm5bGL5pu45bqXIOadvuWxseW6lw!5e0!3m2!1szh-TW!2stw!4v1635002489547!5m2!1szh-TW!2stw"
+          width="100%"
+          height="500"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        >
+        </iframe>
+      </div>
       <div class="infor">
         <p class="storehead">實體店資訊</p>
-				<p class="opentime">
-          【台北直營店 】<br>
-					 星期一休息<br>
-					 星期二～四 11:00~20:00 <br> 
-					 星期五～日 11:00~21:30 <br>
-					 <br>
-					 101台北市信義區松隆路123號
+        <p class="opentime">
+          【台北直營店 】<br />
+          星期一休息<br />
+          星期二～四 11:00~20:00 <br />
+          星期五～日 11:00~21:30 <br />
+          <br />
+          101台北市信義區松隆路123號
         </p>
       </div>
     </section>
 
-		<footer class="footer">
+    <footer class="footer">
       <div class="information">
         <div class="address">
           Address ｜ 地址
@@ -118,15 +133,33 @@
           <br />
           常見Q & A
         </div>
-     
-      <p class="notice">
-        本網站為緯育TibaMe前端工程師專業技術養成班第72期學員專題作品， <br />
-        本平台僅供學習、展示之用。參考資源:森多水耕植研所。若有侵權疑 <br />
-        慮，您可以私訊 <a class="tibame" href="https://www.facebook.com/TibaMe/">[緯育TibaMe]</a>，後續會由專人協助處理
-      </p>
-    </div>
-    
+
+        <p class="notice">
+          本網站為緯育TibaMe前端工程師專業技術養成班第72期學員專題作品， <br />
+          本平台僅供學習、展示之用。參考資源:森多水耕植研所。若有侵權疑 <br />
+          慮，您可以私訊
+          <a class="tibame" href="https://www.facebook.com/TibaMe/"
+            >[緯育TibaMe]</a
+          >，後續會由專人協助處理
+        </p>
+      </div>
     </footer>
-    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+      //漢堡的切換
+      let hamburger_el = document.getElementsByClassName("hamburger_icon")[0];
+      hamburger_el.addEventListener("click", function (e) {
+        hamburger_el.classList.toggle("-on");
+      });
+
+      // 漢堡選單的切換
+      $(function () {
+        $("button.hamburger_icon").on("click", function () {
+          $("nav.nav").toggleClass("-on");
+        });
+      });
+    </script>
   </body>
 </html>
