@@ -20,7 +20,7 @@ footer.footer div.information{
   align-items: baseline;  
   /* border: 1px solid red; */
   /* width: 1200px; */
-  margin: 45px 0;
+  margin: 45px 0 0 0;
   flex-wrap: wrap;
 }
 
