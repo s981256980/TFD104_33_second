@@ -441,7 +441,7 @@ section.product aside.aside > p > i{
 
 section.product div.productitem{
   width: calc(100% - 200px);
-  /* height: 1700px; */
+  
   
   /* position: absolute; */
   display: grid;
