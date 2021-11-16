@@ -69,7 +69,7 @@ button.hamburger_icon.-on span.-hr.-bottom {
 header.header {
   /* border: 1px solid red; */
   width: 100%;
-  /* height: 75px; */
+  height: 75px;
   /* left: 50%;
   transform: translateX(-50%); */
   /* position: relative; */
@@ -92,7 +92,7 @@ header.header {
 header.header a i.fa-user-circle {
   /* text-align: right; */
   font-size: 2rem;
-  display: inline-block;
+  /* display: inline-block; */
   /* text-align: right; */
   padding: 25px 25px;
   float: right;
@@ -174,7 +174,7 @@ header.header nav.nav {
     background-color: #233f30;
     width: 100%;
     height: 100vh;
-    transition: all 1s;
+    transition: all 1s ease-in-out;
     transform: translateX(100%);
     z-index: 99;
   }
@@ -236,7 +236,7 @@ header.header nav.nav ul.nav_list > li {
 }
 
 header.header nav.nav ul.nav_list > li > a:hover {
-  /* text-decoration: underline;
-  text-underline-offset: 10px; */
+  text-decoration: underline;
+  text-underline-offset: 10px;
   border: 1px solid white;
 }

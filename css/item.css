@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+@import "./common/footer.css";
+@import "./common/header1.css";
+*{
+  box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+body{
+  margin: 0;
+}
+img{
+  max-width: 100%;
+}
+
+/* ================================麵包屑==================================== */
+nav.breadcrumbs{
+  /* border: 1px solid red; */
+  width: 100%;
+  /* margin: 0 auto; */
+}
+
+nav.breadcrumbs ul.breadcrumb{
+  list-style: none;
+  display: flex;
+  /* border: 1px solid red; */
+  padding: 10px;
+}
+
+nav.breadcrumbs ul.breadcrumb > li{
+  margin: 0 3px;
+  /* border: 1px solid black; */
+}
+nav.breadcrumbs ul.breadcrumb > li > a{
+  color: #838889;
+}
+
+nav.breadcrumbs ul.breadcrumb > li > a.bcspan{
+  color: #838889;
+  pointer-events: none;
+
+}
+
+nav.breadcrumbs ul.breadcrumb > li > a > span.bcspan1{
+  color: black;
+  /* border: 1px solid blue; */
+
+}
+
+
+
+/* ================================商品文字介紹==================================== */
+
+main.main{
+  border: 1px solid red;
+  width: 100%;
+  /* margin: 0 auto; */
+  padding: 10px;
+  display: flex;
+}
+
+main.main div.mainpic{
+  width: 50%;
+  /* border: 1px solid green; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+main.main div.mainpic > div{
+  /* border: 1px solid blue; */
+  width: 150px;
+  height: 100px;
+  margin: 15px 0;
+}
+
+main.main div.mainpic > div:nth-child(1){
+  /* border: 1px solid yellow; */
+  flex-basis: 100%;
+  height: 400px;
+}
+main.main div.mainpic > div > img{
+ max-height: 100%;
+}
+
+main.main div.maintext{
+  width: 50%;
+  /* border: 1px solid black; */
+}
+
+main.main div.maintext p.maintext-hd{
+  font-size: 32px;
+  margin: 20px 30px;
+}
+
+main.main div.maintext p.maintext-ct{
+  margin: 20px 30px; 
+}
+
+main.main div.maintext div.btn-account{
+  border: 1px solid #595757;
+  max-width: 50%;
+  margin: 20px 30px;
+  height: 30px;
+  background-color: transparent;
+  position: relative;
+  vertical-align: middle;
+  display: flex;
+  border-radius: 15px;
+  /* justify-content: space-between; */
+
+  
+}
+
+main.main div.maintext div.btn-account button.quantitydown{
+  border-radius: 15px 0 0 15px;
+  border: 0;
+  border-right: 1px solid #595757;
+  position: relative;
+  width: 25%;
+  cursor: pointer;
+  /* overflow: hidden; */
+  
+
+}
+
+main.main div.maintext div.btn-account button.quantitydown::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  width: 15px;
+  height: 1px;
+  border-top: 1px solid black;
+  
+}
+
+main.main div.maintext div.btn-account > input{
+  font-size: 18px;
+  border: 0;
+  text-align: center;
+  padding: 10px;
+  width: 50%;
+  /* flex-grow:  */
+}
+
+main.main div.maintext div.btn-account button.quantityadd{
+  border-radius: 0 15px 15px 0;
+  border: 0;
+  border-left: 1px solid #595757;
+  position: relative;
+  width: 25%;
+  cursor: pointer;
+}
+
+main.main div.maintext div.btn-account button.quantityadd::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  width: 15px;
+  height: 1px;
+  border-top: 1px solid black;
+}
+
+main.main div.maintext div.btn-account button.quantityadd::after{
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 60%);
+  width: 1px;
+  height: 15px;
+  border-left: 1px solid black;
+}
+
+main.main div.maintext p.chart{
+  /* border: 1px solid black; */
+  background-color: #233F30;
+  color: white;
+  font-size: 20px;
+  border-radius: 30px;
+  width: 180px;
+  margin: 20px 30px;
+  padding: 8px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+div.shop{
+  border: 1px solid black;
+  display: flex;
+  background-color: #C4C4C4;
+  border-radius: 20px;
+  width: 100%;
+  margin: 50px 0 0 0;
+  justify-content: space-between;
+  
+}
+
+div.shop > p{
+  border: 1px solid red;
+  width: 10%;
+  text-align: center;
+  width: 10%;
+  padding: 5px;
+  color: white;
+  /* flex-shrink: 0; */
+}
+div.shop p.del{
+  background-color: #363636;
+}
+
+
+div.shop p.can{
+  background-color: #363636;
+}
+div.shop p.shop{
+  background-color: #233F30;
+  color: white;
+  padding: 5px;
+}

@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+@import "./common/footer.css";
+@import "./common/header1.css";
+*{
+  box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+body{
+  margin: 0;
+}
+img{
+  max-width: 100%;
+}
+
+header.header nav.nav ul.nav_list li.open a.space{
+  /* content: ""; */
+  border: 1px solid white;
+  /* color: red; */
+  /* font-size: 64px; */
+}
+
+header.header nav.nav ul.nav_list li.spaceli{
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  /* border: 1px solid red; */
+  
+  pointer-events: none;
+}
+
+
+p.head{
+  /* border: 1px solid red; */
+  width: 1200px;
+  margin: 50px auto;
+  font-size: 32px;
+  color: #233F30
+}
+
+p.head::before{
+  content: "";
+  border: 8px solid #233F30;
+  margin: 0 5px 0 0;
+}
+
+/* STEP 1 */
+p.subhead{
+  /* border: 1px solid green; */
+  width: 1200px;
+  margin: 0 auto;
+}
+
+p.subhead span.step1{
+  border-radius: 30px;
+  background-color: #233F30;
+  color: white;
+  padding: 5px;
+  margin: 0 10px 0 0;
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+}
+
+p.subhead span.step1text{
+  margin: 0 0 0 10px;
+  font-size: 20px;
+}
+
+main.main{
+  /* border: 1px solid red; */
+  width: 1200px;
+  margin: 50px auto;
+}
+
+main.main p.space{
+  /* border: 1px solid green; */
+  margin: 0 0 0 50px;
+}
+
+main.main p.space span.livingroom{
+  font-size: 20px;
+  display: inline-block;
+  background-color: rgba(183, 223, 212, 0.5);
+  padding: 10px;
+  border-radius: 15px 15px 0 0;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+main.main p.space span.kitchen{
+  font-size: 20px;
+  display: inline-block;
+  background-color: #D7D0D0;
+  padding: 10px;
+  border-radius: 15px 15px 0 0;
+  margin-right: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+main.main p.space span.bedroom{
+  font-size: 20px;
+  display: inline-block;
+  background-color: #D7D0D0;
+  padding: 10px;
+  border-radius: 15px 15px 0 0;
+  margin-right: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+main.main div.livingroomtext{
+  /* border: 1px solid green; */
+  width: 1100px;
+  height: 300px;
+  background-color: rgba(183, 223, 212, 0.5);
+  position: relative;
+  margin: 0 0 0 50px;
+}
+
+main.main div.livingroomtext p.livingroomcontext{
+  /* border: 1px solid black; */
+  width: 600px;
+  padding: 50px;
+  margin: 0;
+}
+
+main.main div.livingroomtext img{
+  width: 550px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* STEP 2 */
+p.subhead2{
+  /* border: 1px solid green; */
+  width: 1200px;
+  margin: 0 auto 50px;
+}
+
+p.subhead2 span.step2{
+  border-radius: 30px;
+  background-color: #233F30;
+  color: white;
+  padding: 5px;
+  margin: 0 10px 0 0;
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+}
+
+p.subhead2 span.step2text{
+  margin: 0 0 0 10px;
+  font-size: 20px;
+}
+
+section.customizeitem{
+  width: 1200px;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+  height: 900px;
+  /* display: inline-block; */
+}
+
+section.customizeitem div.customizeitem1{
+  width: 1200px;
+  height: 600px;
+  margin: 0;
+  /* border: 1px solid green; */
+  background-image: url(../images/customizeitem1.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+}
+
+section.customizeitem div.customizeitems{
+  margin: 0 auto;
+  width: 1200px;
+  display: inline-block;
+  /* border: 1px solid black; */
+  text-align: center;
+  vertical-align: middle;
+}
+
+section.customizeitem div.customizeitems > i{
+  cursor: pointer;
+}
+
+section.customizeitem div.customizeitems > div{
+  /* border: 1px solid green; */
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  margin: 30px 40px;
+}
+
+section.customizeitem div.customizeitems > i{
+  vertical-align: middle;
+  font-size: 32px;
+  display: inline-block;
+  margin: 0 3px;
+}
+
+section.customizeitem div.customizeitems > div, i{
+  vertical-align: middle;
+}
+
+section.customizeitem div.customizeitems div.customizeitem2{
+  background-image: url(../images/productitem1.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+section.customizeitem div.customizeitems div.customizeitem3{
+  background-image: url(../images/productitem2.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+section.customizeitem div.customizeitems div.customizeitem4{
+  background-image: url(../images/productitem3.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+section.customizeitem div.customizeitems div.customizeitem5{
+  background-image: url(../images/productitem4.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+/* STEP 3 */
+p.subhead3{
+  /* border: 1px solid green; */
+  width: 1200px;
+  margin: 0 auto 50px;
+}
+
+p.subhead3 span.step3{
+  border-radius: 30px;
+  background-color: #233F30;
+  color: white;
+  padding: 5px;
+  margin: 0 10px 0 0;
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+}
+
+p.subhead3 span.step3text{
+  margin: 0 0 0 10px;
+  font-size: 20px;
+}
+
+section.form{
+  /* border: 1px solid red; */
+  width: 800px;
+  margin: 0 auto 100px;
+}
+
+section.form form.forms{
+  display: flex;
+  /* border: 1px solid green; */
+  width: 800px;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  border-radius: 30px;
+  /* background-color: rgba(183, 223, 212, 0.5); */
+  
+}
+
+section.form form.forms div.form-row{
+  display: inline-flex;
+  flex-flow: row wrap;
+
+
+}
+
+section.form form.forms div.form-row div.form-column{
+  flex-basis: 50%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  /* border: 1px solid black; */
+}
+
+section.form form.forms div.form-row div.form-column div.input-string{
+  position: relative;
+}
+
+
+section.form form.forms div.form-row div.form-column div.input-string label.input-label{
+  font-size: 20px;
+  padding: 8px;  
+}
+
+section.form form.forms div.form-row div.form-column div.input-string label.input-label > input{
+  border-width: 0 0 1px 0;
+  width: 100%;
+  padding: 12px;
+  margin: 0 0 10px;
+}
+
+section.form form.forms button.submit-btn{
+  width: 200px;
+  margin: 10px 0 0 0;
+  font-size: 20px;
+  align-self: center;
+  padding: 10px;
+  cursor: pointer;
+}
+

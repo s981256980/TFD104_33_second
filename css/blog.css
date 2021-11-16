@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
+@import "./common/footer.css";
+@import "./common/header1.css";
+*{
+  box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+body{
+  margin: 0;
+}
+img{
+  max-width: 100%;
+}
+
+header.header nav.nav ul.nav_list li.open a.blog{
+  /* content: ""; */
+  border: 1px solid white;
+  /* color: red; */
+  /* font-size: 64px; */
+}
+
+header.header nav.nav ul.nav_list li.blogli{
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  /* border: 1px solid red; */
+  
+  pointer-events: none;
+}
+
+
+main.main{
+  /* border: 1px solid green; */
+  width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+main.main p.mainhead{
+  /* border: 1px solid blue; */
+  font-size: 32px;
+  color: #233F30;
+  text-align: center; 
+}
+
+main.main div.items{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-around;
+
+}
+
+main.main div.items div.foliage{
+  /* border: 1px solid black; */
+  width: 300px;
+}
+
+main.main div.items div.foliage img{
+  width: 300px;
+  height: 300px;
+}
+
+main.main div.items div.foliage p.foliagetext{
+  /* border: 1px solid black; */
+  background-color: #233F30;
+  color: white;
+  font-size: 24px;
+  border-radius: 30px;
+  width: 180px;
+  margin: 5px auto 0;
+  padding: 8px 0;
+  text-align: center;
+}
+
+main.main div.items div.staghornfern{
+  /* border: 1px solid black; */
+  width: 300px;
+}
+
+main.main div.items div.staghornfern img{
+  width: 300px;
+  height: 300px;
+}
+
+main.main div.items div.staghornfern p.staghornferntext{
+  /* border: 1px solid black; */
+  background-color: #233F30;
+  color: white;
+  font-size: 24px;
+  border-radius: 30px;
+  width: 180px;
+  margin: 3px auto 0;
+  padding: 8px 0;
+  text-align: center;
+}
+
+main.main div.items div.succulent{
+  /* border: 1px solid black; */
+  width: 300px;
+}
+
+main.main div.items div.succulent img{
+  width: 300px;
+  height: 300px;
+}
+
+main.main div.items div.succulent p.succulenttext{
+  /* border: 1px solid black; */
+  background-color: #233F30;
+  color: white;
+  font-size: 24px;
+  border-radius: 30px;
+  width: 180px;
+  margin: 3px auto 0;
+  padding: 8px 0;
+  text-align: center;
+}
+
+div.background{
+  /* border: 1px solid black; */
+  min-width: 1400px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/blogbackground.png);
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+section.section{
+  /* border: 1px solid green; */
+  width: 1100px;
+  height: 1450px;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+  /* left: 50%;
+  transform: translateX(-50%); */
+  background-color: white;
+  top: 150px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+section.section aside.aside{
+  /* border: 1px solid black; */
+  width: 200px;
+  height: 600px;
+  margin: 50px 50px 0;
+  display: inline-block;
+}
+
+section.section aside.aside > p{
+  background-color: #233F30;
+  color: white;
+  font-size: 20px;
+  padding: 5px;
+}
+
+section.section aside.aside > p > i{
+  float: right;
+  padding: 5px;
+}
+
+/* 部落格文字區塊 */
+section.section div.blog{
+  /* border: 1px solid purple; */
+  width: 800px;
+  height: 1550px;
+  display: inline-block;
+  margin: 50px 50px 0 0;
+}
+
+/* 第一篇文章 */
+section.section div.blog div.blogtext1 p.blogtext1head{
+  font-size: 32px;
+  color: #233F30;
+}
+
+section.section div.blog div.blogtext1 p.blogtext1head::before{
+  content: "";
+  border: 6px solid #233F30;
+  margin: 0 10px;
+}
+
+section.section div.blog div.blogtext1 p.blogtext1context{
+  margin: 5px 30px;
+}
+
+section.section div.blog div.blogtext1 p.blogtext1more{
+  text-align: right;
+  padding: 0 50px 0 0;
+  /* border: 1px solid red; */
+}
+
+section.section div.blog div.blogtext1 div.bottomline{
+  border: 1px solid #4F4F4F;
+  width: 700px;
+  margin: 0 auto;
+}
+
+/* 第二篇文章 */
+section.section div.blog div.blogtext2 p.blogtext2head{
+  font-size: 32px;
+  color: #233F30;
+  margin: 32px 0 16px;
+}
+
+section.section div.blog div.blogtext2 p.blogtext2head::before{
+  content: "";
+  border: 6px solid #233F30;
+  margin: 0 10px;
+}
+
+section.section div.blog div.blogtext2 p.blogtext2texthead{
+  margin: 0 32px 16px;
+}
+
+
+section.section div.blog div.blogtext2 p.blogtext2context{
+  margin: 10px 32px 5px;
+}
+
+section.section div.blog div.blogtext2 p.blogtext2more{
+  text-align: right;
+  padding: 0 50px 0 0;
+  /* border: 1px solid red; */
+}
+
+section.section div.blog div.blogtext2 div.bottom2line{
+  border: 1px solid #4F4F4F;
+  width: 700px;
+  margin: 0 auto;
+
+}
+
+/* 第三篇文章 */
+section.section div.blog div.blogtext3 p.blogtext3head{
+  font-size: 32px;
+  color: #233F30;
+}
+
+section.section div.blog div.blogtext3 p.blogtext3head::before{
+  content: "";
+  border: 6px solid #233F30;
+  margin: 0 10px;
+}
+
+section.section div.blog div.blogtext3 p.blogtext3context{
+  margin: 5px 30px;
+}
+
+section.section div.blog div.blogtext3 p.blogtext3more{
+  text-align: right;
+  padding: 0 50px 0 0;
+  /* border: 1px solid red; */
+}
+
+section.section div.blog div.blogtext3 div.bottom3line{
+  border: 1px solid #4F4F4F;
+  width: 700px;
+  margin: 0 auto;
+}
+
+/* 第四篇文章 */
+section.section div.blog div.blogtext4 p.blogtext4head{
+  font-size: 32px;
+  color: #233F30;
+}
+
+section.section div.blog div.blogtext4 p.blogtext4head::before{
+  content: "";
+  border: 6px solid #233F30;
+  margin: 0 10px;
+}
+
+section.section div.blog div.blogtext4 p.blogtext4context{
+  margin: 5px 30px;
+}
+
+section.section div.blog div.blogtext4 p.blogtext4more{
+  text-align: right;
+  padding: 0 50px 0 0;
+  /* border: 1px solid red; */
+}
+
+section.section div.blog div.blogtext4 div.bottom4line{
+  border: 1px solid #4F4F4F;
+  width: 700px;
+  margin: 0 auto;
+}
+
+/* 第五篇文章 */
+section.section div.blog div.blogtext5 p.blogtext5head{
+  font-size: 32px;
+  color: #233F30;
+}
+
+section.section div.blog div.blogtext5 p.blogtext5head::before{
+  content: "";
+  border: 6px solid #233F30;
+  margin: 0 10px;
+}
+
+section.section div.blog div.blogtext5 p.blogtext5context{
+  margin: 5px 30px;
+}
+
+section.section div.blog div.blogtext5 p.blogtext5more{
+  text-align: right;
+  padding: 0 50px 0 0;
+  /* border: 1px solid red; */
+}
+
+section.section div.blog div.blogtext5 div.bottom5line{
+  border: 1px solid #4F4F4F;
+  width: 700px;
+  margin: 0 auto;
+}
+
+/* 第六篇文章 */
+section.section div.blog div.blogtext6 p.blogtext6head{
+  font-size: 32px;
+  color: #233F30;
+}
+
+section.section div.blog div.blogtext6 p.blogtext6head::before{
+  content: "";
+  border: 6px solid #233F30;
+  margin: 0 10px;
+}
+
+section.section div.blog div.blogtext6 p.blogtext6context{
+  margin: 5px 30px;
+}
+
+section.section div.blog div.blogtext6 p.blogtext6more{
+  text-align: right;
+  padding: 0 50px 0 0;
+  /* border: 1px solid red; */
+}
+
+section.section div.blog div.blogtext6 div.bottom6line{
+  border: 1px solid #4F4F4F;
+  width: 700px;
+  margin: 0 auto;
+}
+
+
+footer.footer{
+  margin: 300px auto 0;
+}

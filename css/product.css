@@ -25,6 +25,15 @@ header.header nav.nav ul.nav_list li.productli{
   /* border: 1px solid red; */
   pointer-events: none;
 }
+
+@media all and (min-width: 1050px) {
+  header.header nav.nav ul.nav_list li.productli{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+  }
+}
+
+
 /*======================商品介紹 =====================*/
 
 main.main{
@@ -49,6 +58,7 @@ main.main{
 main.main div.plants{
   position: relative;
   width: 90%;
+  /* z-index: -1; */
   /* border: 1px solid brown; */
 }
 @media all and (max-width: 768px){
@@ -57,7 +67,7 @@ main.main div.plants{
     flex-direction: column;
     width: 100%;
     margin: 0 0 50px;
-    z-index: -1;
+    /* z-index: -1; */
   }
 
 }
@@ -87,7 +97,7 @@ main.main div.plants div.planttext{
   position: absolute;
   /* width: 50%; */
   height: auto;
-  top: 20%;
+  top: 25%;
   left: 55%;
 
 }
@@ -104,6 +114,7 @@ main.main div.plants div.planttext{
 
 main.main div.plants p.plantshead{
   font-size: 2rem;
+  margin: 0 0 16px;
   /* position: absolute; */
   /* top: 30%; */
   /* left: 55%; */
@@ -117,11 +128,7 @@ main.main div.plants p.plantshead{
   }
 }
 
-main.main div.plants p.plantstext{
-  /* position: absolute; */
-  /* top: 46%; */
-  /* left: 55%; */
-}
+
 
 @media all and (max-width: 768px){
   main.main div.plants p.plantstext{
@@ -132,26 +139,34 @@ main.main div.plants p.plantstext{
 
 /* main.main div.plants div.button */
 
-main.main div.plants div.button{
+main.main div.plants div.planttext a{
+  display: inline-block;
+  /* border: 1px solid green; */
+  /* z-index: -1; */
+}
+
+main.main div.plants button.button{
   /* border: 1px solid red; */
   background-color: #233F30;
   color: white;
   font-size: 1.5rem;
   border-radius: 30px;
   width: 150px;
-  margin: 25px 0 0 0;
+  margin: 0 0 0 0;
   padding: 10px 20px;
   text-align: center;
+  cursor: pointer;
   /* position: absolute; */
   /* top: 67%; */
   /* left: 55%; */
 }
 
 @media all and (max-width: 768px){
-  main.main div.plants div.button{
-    position: static;
+  main.main div.plants button.button{
+    /* position: static; */
     align-self: center;
     margin: 16px auto 0;
+    /* cursor: pointer; */
   }
 }
 
@@ -169,7 +184,7 @@ main.main div.custom{
     flex-direction: column;
     width: 100%;
     margin: 50px;
-    z-index: -1;
+    /* z-index: -1; */
   }
 }
 
@@ -284,11 +299,6 @@ section.product{
   position: relative;
 }
 
-@media all and (max-width: 768px){
-  section.product{
-    /* border: 1px solid brown; */
-  }
-}
 
 section.product aside.aside{
   /* border: 1px solid black; */
@@ -317,13 +327,17 @@ section.product aside.aside p.itemlist{
   margin: 0;
   padding: 10px 20px;
   text-align: center;
+  display: none;
 }
 
 @media all and (max-width: 768px){
-  section.product aside.aside{
-    /* display: none; */
+  section.product aside.aside p.itemlist{
+    display: block;
+    cursor: pointer;
   }
 }
+
+
 
 section.product aside.aside ul.aside{
   background-color: #233F30;
@@ -456,6 +470,7 @@ section.product div.productitem{
     grid-template-columns: repeat(2, auto);
     width: 100%;
     column-gap: 20px;
+    padding: 0 10px;
   }
 }
 
@@ -464,10 +479,12 @@ section.product div.productitem > div > img:hover{
   transform: rotate(5deg);
 }
 
-/* 第一個商品 */
-section.product div.productitem div.productitem1{
-  /* border: 1px solid black; */
+section.product div.productitem > div > a{
+  display: block;
 }
+
+/* 第一個商品 */
+
 section.product div.productitem div.productitem1 img{
   max-width: 100%;
 }
@@ -493,9 +510,7 @@ section.product div.productitem div.productitem1 p.button1{
 
 /* 第二個商品 */
 
-section.product div.productitem div.productitem2{
-  /* border: 1px solid green; */
-}
+
 
 section.product div.productitem div.productitem2 img{
   max-width: 100%;;
