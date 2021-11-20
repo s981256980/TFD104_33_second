@@ -301,13 +301,20 @@ div.treeline {
 section.course {
   max-width: 1200px;
   margin: 50px auto;
-  border: 1px solid rgb(59, 128, 59);
+  /* border: 1px solid rgb(59, 128, 59); */
+  display: flex;
   /* position: relative; */
+}
+
+@media all and (max-width: 960px){
+  section.course{
+    flex-direction: column;
+  }
 }
 
 section.course aside.coursepic {
   width: 50%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding: 10px;
   display: block;
   /* padding-top:100%; */
@@ -339,11 +346,12 @@ section.course aside.coursepic {
   list-style-type: none;
   /* position: relative; */
   padding: 0;
+  margin-left: 50px;
 }
 
-#content li {
+#content li{
   /* float: left; */
-  /* padding: 0; */
+  padding: 10px 0;
   /* height: 400px; */
   /* width: 100%; */
 }
@@ -360,6 +368,7 @@ section.course aside.coursepic {
     list-style-type: none;
     position: relative;
     padding: 0;
+    margin: 0;
   }
 
   #content li {
@@ -434,27 +443,36 @@ section.course aside.coursepic {
 /* ======================================課程內容文字============================= */
 
 section.course div.coursetext {
-  position: absolute;
-  right: 8%;
-  top: 0;
-  height: 1750px;
+  /* position: absolute; */
+  /* right: 8%; */
+  /* top: 0; */
+  /* height: 1750px; */
   /* border: 1px solid purple; */
+  padding: 10px;
+  margin: 0 20px;
+  /* text-align: center; */
+}
+
+section.course div.coursetext div.courseinfor p.classname{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 24px 0 0px;
 }
 
 section.course div.coursetext div.courseinfor p.classtime {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 24px 0 0px;
 }
 
 section.course div.coursetext div.courseinfor p.classsize {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 24px 0 0;
 }
 
 section.course div.coursetext div.courseinfor p.classfee {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 24px 0 0;
 }
@@ -465,12 +483,9 @@ section.course div.coursetext div.line {
   /* width: 350px; */
 }
 
-section.course div.coursetext div.classdetail {
-  /* border: 1px solid black; */
-  height: 1400px;
-}
+
 section.course div.coursetext div.classdetail p.classintroduction {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -478,14 +493,15 @@ section.course div.button {
   /* border: 1px solid black; */
   background-color: #233f30;
   color: white;
-  font-size: 24px;
-  border-radius: 10px;
+  font-size: 1.5rem;
+  border-radius: 30px;
   width: 150px;
   margin: 25px auto 0;
   padding: 10px 20px;
   text-align: center;
-  position: sticky;
-  top: 0px;
+  /* position: sticky; */
+  /* top: 0px; */
+  
 }
 
 header.header nav.nav ul.nav_list li.courseli {

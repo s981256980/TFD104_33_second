@@ -108,8 +108,10 @@
         </ul>
       </aside>
 
-      <!-- <div class="coursetext">
+      <div class="coursetext">
         <div class="courseinfor">
+          <p class="classname"> 課程名稱-Class Name </p>
+          <p class="classnametext"> 療癒植栽手作課 </p>
           <p class="classtime"> 開課時間-Class Time </p>
           <p class="classtimetext"> 2021年9月16日 </p>
           <p class="classsize"> 人數-Class Size </p>
@@ -150,7 +152,7 @@
           </a>          
         </div>
         
-      </div> -->
+      </div>
     </section>
 
     <footer class="footer">
@@ -207,6 +209,8 @@
 
       const getSliderHeight = () => {
         const screenWidth = screen.width;
+        
+            
         if (screenWidth < 960) {
           $(function () {
             let divWidth = $(".coursepic").width();
