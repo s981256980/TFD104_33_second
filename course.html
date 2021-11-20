@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <title>手作課程</title>
     <link rel="stylesheet" href="./css/course.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
-    <script src="https://kit.fontawesome.com/3088e0a9fd.js" crossorigin="anonymous"></script>
-
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <script
+      src="https://kit.fontawesome.com/3088e0a9fd.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header class="header">
@@ -26,8 +31,8 @@
 
       <nav class="nav">
         <ul class="nav_list">
-          <li class=" open">
-            <a  href="product.html">植栽</a>
+          <li class="open">
+            <a href="product.html">植栽</a>
           </li>
           <li class="close">|</li>
           <li class="courseli open">
@@ -49,35 +54,41 @@
       </nav>
     </header>
 
-
-
-
     <main class="main">
       <p class="coursehead">療癒手作課程</p>
 
       <div class="handmadecourse">
         <div class="handmadecoursepic">
-          <img src="./images/handmadecourse.jpg" alt="療癒植栽手作體驗" />
-
-          <span class="course1date"> 9月16日 </span>
+          <!-- <img src="./images/handmadecourse.jpg" alt="療癒植栽手作體驗" /> -->
         </div>
-        <span class="course1text"> 療癒植栽手作 </span>
-        <span class="coursetext1">
-          more
-          <i class="fas fa-arrow-right"></i>
-        </span>
+        <div class="coursetext">
+          <span class="course1date"> 9月16日 </span>
+          <span class="course1text"> 療癒植栽手作 </span>
+
+          <span class="coursetext1">
+            <a href="#course">
+              more
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </span>
+        </div>
       </div>
 
       <div class="dryflowercourse">
         <div class="dryflowercoursepic">
-          <img src="./images/dryflowercourse.png" alt="療癒乾燥花手作" />
-          <span class="course2date"> 10月06日 </span>
+          <!-- <img src="./images/dryflowercourse.png" alt="療癒乾燥花手作" /> -->
         </div>
-        <span class="course2text"> 療癒乾燥花手作 </span>
-        <span class="coursetext2">
-          more
-          <i class="fas fa-arrow-right"></i>
-        </span>
+
+        <div class="dryflower">
+          <span class="course2date"> 10月06日 </span>
+          <span class="course2text"> 療癒乾燥花手作 </span>
+          <span class="coursetext2">
+            <a href="">
+              more
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </span>
+        </div>
       </div>
     </main>
 
@@ -85,13 +96,19 @@
 
     <section class="course">
       <aside class="coursepic">
-        <div class="coursepic1"></div>
-        <div class="coursepic2"></div>
-        <div class="coursepic3"></div>
-        <div class="coursepic4"></div>
+        <ul id="content">
+          <li><img src="../images/dryflowercourse.png" alt="乾燥花課程" /></li>
+          <li><img src="../images/course2.png" alt="乾燥花課程" /></li>
+          <li><img src="../images/course3.jpg" alt="乾燥花課程" /></li>
+          <li><img src="../images/course.jpg" alt="乾燥花課程" /></li>
+        </ul>
+
+        <ul id="contentButton">
+          <!-- <li class="clickMe"></li> -->
+        </ul>
       </aside>
 
-      <div class="coursetext">
+      <!-- <div class="coursetext">
         <div class="courseinfor">
           <p class="classtime"> 開課時間-Class Time </p>
           <p class="classtimetext"> 2021年9月16日 </p>
@@ -133,9 +150,8 @@
           </a>          
         </div>
         
-      </div>
+      </div> -->
     </section>
-
 
     <footer class="footer">
       <div class="information">
@@ -161,37 +177,17 @@
           <br />
           常見Q & A
         </div>
-     
-      <p class="notice">
-        本網站為緯育TibaMe前端工程師專業技術養成班第72期學員專題作品， <br />
-        本平台僅供學習、展示之用。參考資源:森多水耕植研所。若有侵權疑 <br />
-        慮，您可以私訊 <a class="tibame" href="https://www.facebook.com/TibaMe/">[緯育TibaMe]</a>，後續會由專人協助處理
-      </p>
-    </div>
 
+        <p class="notice">
+          本網站為緯育TibaMe前端工程師專業技術養成班第72期學員專題作品， <br />
+          本平台僅供學習、展示之用。參考資源:森多水耕植研所。若有侵權疑 <br />
+          慮，您可以私訊
+          <a class="tibame" href="https://www.facebook.com/TibaMe/"
+            >[緯育TibaMe]</a
+          >，後續會由專人協助處理
+        </p>
+      </div>
     </footer>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -209,18 +205,104 @@
         });
       });
 
+      const getSliderHeight = () => {
+        const screenWidth = screen.width;
+        if (screenWidth < 960) {
+          $(function () {
+            let divWidth = $(".coursepic").width();
+            // console.log(divWidth);
+            let imgCount = $("#content li").length;
+            // console.log(imgCount)
+
+            for (let i = 0; i < imgCount; i++) {
+              $("#contentButton").append("<li></li>");
+            }
+            $("#contentButton li:nth-child(1)").addClass("clickMe");
+
+            // let a = divWidth * imgCount;
+            // console.log(a);
+
+            $("#content li").width(divWidth); // li寬
+            $("#content").width(divWidth * imgCount); // ul寬
+
+            let liHeight = $("#content li").height();
+            $("#content").height(liHeight);
+            // console.log(liHeight);
+
+            let index;
+            $("#contentButton li").click(function () {
+              index = $(this).index();
+
+              $("#content").animate({
+                left: divWidth * index * -1,
+              });
+
+              $(this).addClass("clickMe");
+              $("#contentButton li").not(this).removeClass("clickMe");
+            });
+          });
+
+        }
+
+        // let imgCount = $("#content li").length;
+        // const pageWidth = document.documentElement.scrollWidth;
+        // if (pageWidth < 960){
+        //   $(function () {
+        //     let divWidth = $(".coursepic").width();
+        //     console.log(divWidth);
+        //     let imgCount = $("#content li").length;
+        //     // console.log(imgCount)
+
+        //     for (let i = 0; i < imgCount; i++) {
+        //       $("#contentButton").append("<li></li>");
+        //       console.log(i);
+        //     }
+        //     $("#contentButton li:nth-child(1)").addClass("clickMe");
+
+        //     // let a = divWidth * imgCount;
+        //     // console.log(a);
+
+        //     $("#content li").width(divWidth); // li寬
+        //     $("#content").width(divWidth * imgCount); // ul寬
+
+        //     let liHeight = $("#content li").height();
+        //     $("#content").height(liHeight);
+        //     // console.log(liHeight);
+
+        //     let index;
+        //     $("#contentButton li").click(function () {
+        //       index = $(this).index();
+
+        //       $("#content").animate({
+        //         left: divWidth * index * -1,
+        //       });
+
+        //       $(this).addClass("clickMe");
+        //       $("#contentButton li").not(this).removeClass("clickMe");
+        //     });
+        //   });
+          
+        // }
+
+        // if (pageWidth > 960.5){
+        //   $(function(){
+        //   let divWidth = $(".coursepic").width();
+        //   $("#content li").width(divWidth);
+        //     // console.log(divWidth);
+
+        //     let liHeight = $("#content li").height();
+        //     $("#content").height(liHeight * imgCount);
+        //   });
+        // }
+
+
+      };
+
+      // window.onresize = getSliderHeight;
+      getSliderHeight();
 
 
 
-
-
-
-
-
-
-
-
-
-      </script>
+    </script>
   </body>
 </html>

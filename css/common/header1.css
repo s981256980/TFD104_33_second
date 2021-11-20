@@ -68,8 +68,9 @@ button.hamburger_icon.-on span.-hr.-bottom {
 
 header.header {
   /* border: 1px solid red; */
-  width: 100%;
+  max-width: 1200px;
   height: 75px;
+  margin: 0 auto;
   /* left: 50%;
   transform: translateX(-50%); */
   /* position: relative; */
@@ -151,8 +152,6 @@ header.header a.logo_img img {
   }
 }
 
-
-
 header.header nav.nav {
   /* border: 1px solid green; */
   max-width: 100%;
@@ -195,7 +194,7 @@ header.header nav.nav ul.nav_list {
 
 header.header nav.nav ul.nav_list > li {
   display: inline-flex;
-  padding: 0 3px;
+  padding: 0 10px;
   font-size: 1.5rem;
 }
 
@@ -238,5 +237,11 @@ header.header nav.nav ul.nav_list > li {
 header.header nav.nav ul.nav_list > li > a:hover {
   text-decoration: underline;
   text-underline-offset: 10px;
-  border: 1px solid white;
+  /* border: 1px solid white; */
+}
+
+@media all and (max-width: 1050px){
+  header.header nav.nav ul.nav_list > li > a:hover{
+    border: 1px solid white;
+  }
 }

@@ -78,7 +78,7 @@ header.header{
   /* text-align: center; */
   margin: 0 auto;
   transition: transform 1s;
-  width: 100%;
+  max-width: 1200px;
   
 }
 
@@ -239,7 +239,7 @@ header.header nav.nav ul.nav_list > li:hover{
 
 header.header2{
   /* border: 1px solid red; */
-  width: 100%;
+  max-width: 1200px;
   height: 65px;
   /* left: 50%;
   transform: translateX(-50%); */

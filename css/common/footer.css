@@ -4,7 +4,8 @@
 
 footer.footer{
   /* border: 1px solid black; */
-  /* width: 1200px; */
+  max-width: 1200px;
+  margin: 0 auto;
   /* height: 400px; */
   /* margin: 0 auto; */
   background-color: #233F30;
